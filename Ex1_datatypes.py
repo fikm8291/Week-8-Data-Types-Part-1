@@ -1,167 +1,144 @@
+"# -------------------------------------------
+# Exercise 1: Dictionaries & Data Structures
 # -------------------------------------------
-# Exercise 1: Dictionaries & Data Types
-# -------------------------------------------
-# In this exercise, you'll work in groups of 2–3.
-# You'll review data types you already know and learn about DICTIONARIES.
 #
-# WHAT ARE DICTIONARIES?
-# Dictionaries store data in KEY-VALUE pairs.
-# Think of a real dictionary: you look up a WORD (key) to find its DEFINITION (value).
+# GOAL:
+# 1. Review data types: strings, integers, and lists.
+# 2. Master Dictionaries: Storing data in KEY-VALUE pairs.
+# 3. Practise the Collaborative Git Workflow: Pull -> Commit -> Push.
+# 4. Practise the Pair Programming Workflow: Driver vs Navigator.
 #
-# Example:
-# student = {"name": "Alex", "age": 16, "grade": "A"}
+# CONCEPT:
+# Dictionaries allow you to group related data together under one variable.
+# Unlike a list which uses numbers (0, 1, 2), a dictionary uses "Keys".
 #
-# Access values using keys:
-# print(student["name"])  # Output: Alex
-# print(student["age"])   # Output: 16
+# example_record = {"name": "Ammar", "role": "Trainee", "id": 101}
+# 
+# To access data: print(example_record["name"]) -> Output: Ammar
+# To add data:    example_record["status"] = "Active"
 #
-# Add new items:
-# student["hobby"] = "football"
-#
-# Each learner will build on the previous one's work.
-# -------------------------------------------
-# GROUP INSTRUCTIONS
-# -------------------------------------------
-# Work in groups of 2–3 learners.
-# Share the same GitHub Classroom repository.
-#
-# After each task:
-# - Current learner: git add, commit, and push
-# - Next learner: move to your computer and git pull origin main
-#
-# If you are in pairs: swap computers after each task.
+# PAIR PROGRAMMING RULES:
+# - The DRIVER types the code.
+# - The NAVIGATOR reads the instructions and guides the driver.
+# - You will SWITCH seats and computers after every task!
 # -------------------------------------------
 
 
-# Task 1: Recording a Found Item
+# -------------------------------------------
+# Task 1: Building a Single Record
 # -------------------------------------------
 print("-------------------------------------------\n"
-    + "Task 1: Recording a Found Item\n"
+    + "Task 1: Building a Single Record\n"
     + "-------------------------------------------")
-# Imagine you're creating a system to track items that have been found.
-# Let's start by recording one item.
-#
+
+# CONCEPT: Creating a dictionary from user input.
+# To use a dictionary, use curly brackets {} and separate keys/values with colons.
+
 # TODO:
-# 1. Ask the user for: item name, colour, and location where it was found.
-# 2. Create a dictionary called 'found_item' with keys: "name", "colour", "location"
-# 3. Print the entire dictionary.
-# 4. Print a message: "Recorded: <item name> (<colour>) found at <location>"
+# 1. Ask the user for three pieces of information: a Subject, a Priority (Low/High), and a Description.
+# 2. Create a dictionary called 'log_entry' using these three inputs as values.
+# 3. Use the keys: "subject", "priority", and "description".
+# 4. Print the dictionary to the console.
+# 5. Print a summary using an f-string: "Log Created: [SUBJECT] ([PRIORITY])"
 #
-# Example:
-# Enter item name: wallet
-# Enter colour: black
-# Enter location: train station
-# Output:
-# {'name': 'wallet', 'colour': 'black', 'location': 'train station'}
-# Recorded: wallet (black) found at train station
-#
+# EXPECTED OUTPUT:
+# Enter Subject: System Update
+# Enter Priority: High
+# Enter Description: Server restart required.
+# Log Created: System Update (High)
+
 # Write your code below:
 
-# HINT: Create dictionary syntax is:
-# my_dict = {"key1": value1, "key2": value2, "key3": value3}
 
+# -------------------------------------------
+# SAVING YOUR WORK
+# -------------------------------------------
+# 1. Save your file (Ctrl+S or Cmd+S).
+# 2. Open the terminal.
+# 3. Run:
+#    git add Ex1_dictionaries.py
+#    git commit -m "Completed Task 1"
+#    git push origin main
+#
+# *** STOP! ***
+# SWITCH SEATS AND COMPUTERS NOW.
+# -------------------------------------------
 
 
 # -------------------------------------------
-# SWAP COMPUTERS
+# Task 2: Managing Multiple Records (Logic)
 # -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Task 1"
-# git push origin main
-# Next learner: git pull origin main
-# -------------------------------------------
+# INSTRUCTION: You are now at a new computer. Get the latest code!
+# 1. Open the terminal.
+# 2. Run: `git pull origin main`
 
-
-# Task 2: Multiple Found Items
-# -------------------------------------------
-print("-------------------------------------------\n"
-    + "Task 2: Multiple Found Items\n"
+print("\n-------------------------------------------\n"
+    + "Task 2: Managing Multiple Records\n"
     + "-------------------------------------------")
-# We need to track multiple items, not just one!
-# Let's store several found items in a list.
-#
+
+# CONCEPT: To store many records, we put our dictionaries inside a LIST.
+# all_records = [record1, record2]
+
 # TODO:
-# 1. Create an empty list called 'found_items'.
-# 2. Add the 'found_item' dictionary from Task 1 to this list.
-# 3. Ask the user if they want to add another item (yes/no).
-# 4. If yes, ask for item name, colour, and location again.
-#    Create a new dictionary and add it to the 'found_items' list.
-# 5. Print the total number of items recorded.
-# 6. Use a for loop to print each item in a readable format:
-#    "Item <number>: <name> (<colour>) - Found at: <location>"
+# 1. Create an empty list called 'database'.
+# 2. Add (append) your 'log_entry' dictionary from Task 1 into this list.
+# 3. Use a 'while' loop to ask the user if they want to add another entry (y/n).
+# 4. If 'y', repeat the inputs from Task 1, create a new dictionary, and append it to the list.
+# 5. After the loop, print: "Total records in system: [COUNT]"
 #
-# Example:
-# Add another item? yes
-# Total items recorded: 2
-# Item 1: wallet (black) - Found at: train station
-# Item 2: phone (silver) - Found at: shopping centre
-#
+# HINT: Use len(database) to get the total count.
+
 # Write your code below:
 
-# HINT: To access dictionary values, use: dictionary_name["key_name"]
-# Example: found_item["name"] gets the name value
 
+# -------------------------------------------
+# SAVING YOUR WORK
+# -------------------------------------------
+# 1. Save your file.
+# 2. Run:
+#    git add Ex1_dictionaries.py
+#    git commit -m "Completed Task 2"
+#    git push origin main
+#
+# *** STOP! ***
+# SWITCH SEATS AND COMPUTERS NOW.
+# -------------------------------------------
 
 
 # -------------------------------------------
-# SWAP COMPUTERS
+# Task 3: Data Retrieval (Loops)
 # -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Task 2"
-# git push origin main
-# Next learner: git pull origin main
-# -------------------------------------------
+# INSTRUCTION: Run: `git pull origin main`
 
-
-# Task 3: Viewing All Records
-# -------------------------------------------
-print("-------------------------------------------\n"
-    + "Task 3: Viewing All Records\n"
+print("\n-------------------------------------------\n"
+    + "Task 3: Data Retrieval & Formatting\n"
     + "-------------------------------------------")
-# We need to display all found items in a clear, easy-to-read format.
-#
+
 # TODO:
-# 1. Print a header: "=== FOUND ITEMS RECORDS ==="
-# 2. Check if the 'found_items' list is empty.
-#    - If empty, print "No items recorded yet."
-#    - If not empty, use a for loop to display all items.
-# 3. For each item, print:
-#    "Record <number>:"
-#    "  Name: <name>"
-#    "  Colour: <colour>"
-#    "  Location: <location>"
-#    (Print a blank line between each record)
-# 4. Print the total count: "Total items: <number>"
+# 1. Print a header: "--- SYSTEM LOG VIEW ---"
+# 2. Use a 'for' loop to iterate through your 'database' list.
+# 3. For every record, print the details in a clean format:
+#    "Subject: [Subject Value]"
+#    "Priority: [Priority Value]"
+#    "Details: [Description Value]"
+#    (Add a dashed line between records for clarity).
 #
-# Example:
-# === FOUND ITEMS RECORDS ===
-# Record 1:
-#   Name: wallet
-#   Colour: black
-#   Location: train station
-#
-# Record 2:
-#   Name: phone
-#   Colour: silver
-#   Location: shopping centre
-#
-# Total items: 2
-#
+# HINT: Inside the loop, access values using record["subject"]
+
 # Write your code below:
 
-# HINT: When looping through a list of dictionaries:
-# for item in found_items:
-#     print(item["name"])  # Access the name from each dictionary
-
-
 
 # -------------------------------------------
-# SWAP COMPUTERS
+# SAVING YOUR WORK
 # -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Task 3"
-# git push origin main
-# Next learner: git pull origin main
+# 1. Save your file.
+# 2. Run:
+#    git add Ex1_dictionaries.py
+#    git commit -m "Completed Task 3"
+#    git push origin main
+#
+# *** STOP! ***
+# SWITCH SEATS AND COMPUTERS NOW.
 # -------------------------------------------
 
 
@@ -169,119 +146,82 @@ print("-------------------------------------------\n"
 # EXTENSION ACTIVITIES
 # -------------------------------------------
 
-# Extension 1: Search by Item Name
+# Extension 1: Input Validation Gatekeeper
 # -------------------------------------------
-print("-------------------------------------------\n"
-    + "Extension 1: Search by Item Name\n"
+# INSTRUCTION: Run `git pull origin main` first.
+
+print("\n-------------------------------------------\n"
+    + "Extension 1: Input Validation Gatekeeper\n"
     + "-------------------------------------------")
-# Users need to search for specific items quickly.
-#
+
 # TODO:
-# 1. Ask the user: "Enter item name to search for:"
-# 2. Create a variable called 'found' and set it to False.
-# 3. Use a for loop to check each item in 'found_items'.
-#    If the item's name matches the search (use .lower() for both to ignore case):
-#    - Set 'found' to True
-#    - Print the full details of that item
-# 4. After the loop, if 'found' is still False, print "No items found with that name."
+# 1. Create a new input for an "Office Location".
+# 2. Use an 'if' statement to check if the input is empty using len() or == "".
+# 3. IF it is empty, print "ERROR: Location cannot be blank."
+# 4. ELSE, print "Location [INPUT] accepted."
 #
-# Example:
-# Enter item name to search for: wallet
-# Found: wallet (black) - Found at: train station
-#
-# HINT: Use item["name"].lower() == search_term.lower()
-#
+# HINT: Validation ensures your program doesn't save "blank" data.
+
 # Write your code below:
 
 
-
-
+# Extension 2: Search & Filter Logic
 # -------------------------------------------
-# SWAP COMPUTERS
-# -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Extension 1"
-# git push origin main
-# Next learner: git pull origin main
-# -------------------------------------------
-
-
-# Extension 2: Data Validation
-# -------------------------------------------
-print("-------------------------------------------\n"
-    + "Extension 2: Data Validation\n"
+print("\n-------------------------------------------\n"
+    + "Extension 2: Search & Filter Logic\n"
     + "-------------------------------------------")
-# We need to make sure users enter valid data!
-#
+
 # TODO:
-# 1. Ask for a new item name, colour, and location.
-# 2. BEFORE creating the dictionary, check:
-#    - Item name is not empty (length > 0)
-#    - Colour is not empty (length > 0)
-#    - Location is not empty (length > 0)
-# 3. If ANY field is empty, print "Error: All fields must be filled in!" and DON'T add the item.
-# 4. If all fields are valid:
-#    - Create the dictionary
-#    - Add it to 'found_items'
-#    - Print "Item added successfully!"
-# 5. Print the updated total count.
-#
-# Example (invalid):
-# Enter item name: 
-# Error: All fields must be filled in!
-#
-# Example (valid):
-# Item added successfully!
-# Total items: 3
-#
+# 1. Ask the user for a Subject to search for.
+# 2. Create a variable 'found = False'.
+# 3. Loop through the 'database' list.
+# 4. IF the record's subject matches the search (use .lower() to be safe):
+#    - Print the full record details.
+#    - Set 'found = True'.
+# 5. After the loop, if 'found' is still False, print "No matching records found."
+
 # Write your code below:
 
 
+# -------------------------------------------
+# SAVING YOUR WORK
+# -------------------------------------------
+# 1. Save your file.
+# 2. Run:
+#    git add Ex1_dictionaries.py
+#    git commit -m "Completed extensions"
+#    git push origin main
+#
+# *** STOP! ***
+# SWITCH SEATS AND COMPUTERS NOW.
+# -------------------------------------------
 
 
 # -------------------------------------------
-# SWAP COMPUTERS
+# ADVANCED ACTIVITY: Auto-Generated ID Numbers
 # -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Extension 2"
-# git push origin main
-# Next learner: git pull origin main
-# -------------------------------------------
+# INSTRUCTION: Run `git pull origin main` first.
 
-
-# Extension 3: Adding Item IDs
-# -------------------------------------------
-print("-------------------------------------------\n"
-    + "Extension 3: Adding Item IDs\n"
+print("\n-------------------------------------------\n"
+    + "ADVANCED ACTIVITY: Auto-Generated ID Numbers\n"
     + "-------------------------------------------")
-# Each found item should have a unique reference number for easy tracking.
-#
+
 # TODO:
-# 1. Create a variable called 'next_id' and set it to 1.
-# 2. Go through each item in 'found_items' using a for loop.
-# 3. Add an "id" key to each dictionary with the current 'next_id' value.
-# 4. Increase 'next_id' by 1 after each item.
-# 5. Display all items again, but this time include the ID:
-#    "ID: <id> | Name: <name> | Colour: <colour> | Location: <location>"
-# 6. Update your search function from Extension 1 to also show the ID when found.
-#
-# Example:
-# ID: 1 | Name: wallet | Colour: black | Location: train station
-# ID: 2 | Name: phone | Colour: silver | Location: shopping centre
-#
-# HINT: You can add new keys to existing dictionaries like this:
-# item["id"] = next_id
-#
+# 1. Create a variable 'counter = 1001'.
+# 2. Loop through your 'database' list.
+# 3. Add a new key called "id" to each dictionary and set it to the value of 'counter'.
+# 4. Increment the 'counter' by 1 after each record.
+# 5. Print your records again, but this time include the ID in the output.
+
 # Write your code below:
 
 
-
-
 # -------------------------------------------
-# Submitting Your Work
+# FINAL SUBMISSION
 # -------------------------------------------
-# git add Ex1_datatypes.py
-# git commit -m "Completed Extension 3"
-# git push origin main
-# Check GitHub to confirm your group's final version appears.
-# -------------------------------------------
+# 1. Save this file.
+# 2. Run:
+#    git add Ex1_dictionaries.py
+#    git commit -m "Completed all activities"
+#    git push origin main
+# -------------------------------------------"

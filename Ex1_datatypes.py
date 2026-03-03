@@ -56,7 +56,7 @@ print("-------------------------------------------\n"
 # 1. Save your file (Ctrl+S or Cmd+S).
 # 2. Open the terminal.
 # 3. Run:
-#    git add Ex1_dictionaries.py
+#    git add Ex1_datatypes.py
 #    git commit -m "Completed Task 1"
 #    git push origin main
 #
@@ -96,7 +96,7 @@ print("\n-------------------------------------------\n"
 # -------------------------------------------
 # 1. Save your file.
 # 2. Run:
-#    git add Ex1_dictionaries.py
+#    git add Ex1_datatypes.py
 #    git commit -m "Completed Task 2"
 #    git push origin main
 #
@@ -133,7 +133,7 @@ print("\n-------------------------------------------\n"
 # -------------------------------------------
 # 1. Save your file.
 # 2. Run:
-#    git add Ex1_dictionaries.py
+#    git add Ex1_datatypes.py
 #    git commit -m "Completed Task 3"
 #    git push origin main
 #
@@ -188,7 +188,7 @@ print("\n-------------------------------------------\n"
 # -------------------------------------------
 # 1. Save your file.
 # 2. Run:
-#    git add Ex1_dictionaries.py
+#    git add Ex1_datatypes.py
 #    git commit -m "Completed extensions"
 #    git push origin main
 #
@@ -221,7 +221,7 @@ print("\n-------------------------------------------\n"
 # -------------------------------------------
 # 1. Save this file.
 # 2. Run:
-#    git add Ex1_dictionaries.py
+#    git add Ex1_datatypes.py
 #    git commit -m "Completed all activities"
 #    git push origin main
 # -------------------------------------------
